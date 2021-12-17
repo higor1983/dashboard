@@ -1,0 +1,11 @@
+:root{
+    --cordestaque:#12192c;
+    --cordestaquetransparente:#12192c77;
+    --cordestaquedegrade:#121e42;
+    --cordestaquehover:rgb(0, 0, 212);
+    --corsecundaria:white;
+    --corsombra:rgba(0, 0, 156, 0.37);
+    --corsombraultraleve:rgba(0, 0, 156, 0.068);
+    --corcheck:rgb(255, 196, 0);
+    --cortextodescreto:rgba(5, 5, 237, 0.685);
+}

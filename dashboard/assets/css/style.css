@@ -1,0 +1,691 @@
+@import url(global.css);
+@import url(variavel.css);
+@import url(animations.css);
+
+/*-----------
+Menu lateral 
+-------------*/
+
+#menu-lateral{
+    background-color: var(--cordestaque);
+    width: 240px;
+    height: 100vh;
+    text-align: center;
+    box-shadow: 0px 0px 10px var(--corsombra);
+    animation-name: menuLatrela;
+    animation-duration: 1s;
+}
+
+.logo{
+    text-align: center;
+    color: var(--corsecundaria);
+    margin-top: 20px;
+}
+
+.ul-menu{
+    text-align: left;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.ul-menu > a > li{
+    padding: 5px 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ul-menu > a > li > .paragrafo-menu{
+    margin-left: 5px;
+    margin-top: 7px;
+}
+
+a{
+    color: var(--corsecundaria);
+    text-decoration: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+/*CSS acordion
+--------------*/
+
+#li-acordion{
+    padding: 5px 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#li-acordion.li-acordion{
+    margin-bottom: -30px;
+    background-color: rgba(236, 236, 236, 0.1);
+    width: 180px;
+    margin-left: 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+#acordion-design{
+    background-color: rgba(236, 236, 236, 0.1);
+    display: none;
+    width: 180px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 0px  0px 5px 5px ;
+    margin-top: 10px;
+}
+
+#acordion-design.acordion-active{
+    display: block;
+}
+
+#acordion-design > ul{
+    margin-left: 10px;
+    list-style: none;
+}
+
+#acordion-design > ul > li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#acordion-design > ul > li > a{
+    font-size: 14px;
+
+}
+
+#acordion-design > ul > li > a:hover{
+    font-weight: 600;
+}
+
+/*CSS botão mobile
+------------------*/
+
+#btn-mobile{
+    display: none;
+    border: none;
+    background-color: var(--cordestaque);
+    color: var(--corsecundaria);
+    font-weight: 600;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0px 0px 5px var(--corsombra);
+    outline: none;
+    padding-left: 25px;
+    border-radius: 0px 10px 10px 0px;
+    height: 50px;
+    position: absolute;
+}
+
+@media (max-width:900px){
+    #btn-mobile{
+        display: block;
+    }
+
+    #menu-lateral{
+        display: none;
+    }
+
+    #menu-lateral.active{
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        border-radius: 0px 0px 10px 0px;
+
+    }
+
+    #btn-mobile.inverter{
+        background-color: var(--corsecundaria);
+        color: var(--cordestaque);
+        height: 50px;
+        margin-left: 240px;
+        position: absolute;
+    }
+}
+
+/*------------------------------------------
+Area de informações e gráficos do cliente
+------------------------------------------*/
+
+#main{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: calc(100vw - 240px);
+}
+
+@media (max-width:900px){
+    #main{
+        width: 100vw;
+    }
+}
+
+/*lado LEFT do painel
+---------------------*/
+
+.left{
+    max-width: 750px;
+    height: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*CSSs das BOXs do lado LEFT
+---------------------------*/
+
+.gráfico-linhas{
+    background-color: var(--corsecundaria);
+    width: 740px;
+    height: 180px;
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+}
+
+.gráficos-quadrados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 55px;
+    margin-top: 25px;
+}
+
+.gastos, .alcance, .seguidores{
+    width: 210px;
+    height: 180px;
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.gráficos-pares{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 55px;
+}
+
+.meta{
+    width: 210px;
+    height: 215px;
+    margin-top: 25px ;
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+}
+
+.gráfico-coluna{
+    width: 475px;
+    height: 215px;
+    margin-top: 25px ;
+    padding: 5px;
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+}
+
+/*lado RIGTH do painel
+---------------------*/
+
+.rigth{
+    width: 300px;
+    height: 650px;
+}
+
+.metas-individuais{
+    width: 300px;
+    height: 180px;
+    background-color: var(--corsecundaria);
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.aviso{
+    width: 300px;
+    height: 380px;
+    margin-top: 20px;
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.aviso > div{
+    margin-top: 20px;
+}
+
+.titulo{
+    font-weight: 600;
+    color: var(--cordestaque);
+}
+
+.paragrafo-aviso{
+    font-size: 12px;
+    color: var(--cordestaque);
+}
+
+/*CSSs para a resolução menor
+----------------------------*/
+
+@media (max-width: 1310px){
+    .rigth{
+        display: none;
+    }
+}
+
+@media (max-width:1000px){
+
+    .left{
+        height: 650px;
+        padding: 10px;
+    }
+
+    .gastos, .alcance, .seguidores{
+        width: 250px;
+
+    }
+
+    .gráfico-linhas, .gráficos-pares{
+        display: none;
+    }
+
+    .rigth{
+        margin-top: 20px;
+        display: block;
+    }
+}
+
+/*--------------------
+Página de minha conta
+---------------------*/
+
+#minhaconta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    color: var(--cordestaque);
+}
+
+.minha-conta-center{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+.info-simple{
+    width: 300px;
+    height: 300px;
+    background-color: var(--corsecundaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+}
+
+.info-simple > div{
+    text-align: center;
+}
+
+.ft-perfil{
+    width: 150px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+}
+
+.nome-user{
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--cordestaque);
+}
+
+.info-alt{
+    width: calc(700px - 20px);
+    height: calc(500px - 20px);
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.info-alt > h3{
+    font-size: 26px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 25px;
+    color: var(--cordestaque);
+}
+
+.info-alt > div{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 30px;
+}
+
+.nome-info{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(155, 155, 155);
+}
+
+.data-info{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--cordestaque);
+}
+
+.btn-sair{
+    border: none;
+    padding: 10px 20px;
+    width: 150px;
+    margin-left: -5px;
+    background-color: var(--corcheck);
+    color: var(--corsecundaria);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+@media (max-width:1000px){
+    .info-alt{
+        width: calc(320px - 10px);
+        padding: 10px;
+    }
+}
+
+/*--------------------
+Página de relatórios
+---------------------*/
+
+.page-relatorios{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.relatorios-nome{
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--cordestaque);
+}
+
+.relatorios-nome > h1{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.relatorios{
+    width: 900px;
+    height: 500px;
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    animation-name: relatorio;
+    animation-duration: 1s;
+}
+
+.link-relatorio{
+    display: flex;
+    gap: 50px;
+    padding: 20px 25px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-relatorio:nth-child(even) {
+    background-color: var(--cordestaque);
+    color:var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+}
+
+.link-relatorio{
+    color: var(--cordestaque);
+}
+
+
+.info-relatorios{
+    max-width: 900px;
+    margin-top: 15px;
+}
+
+.info-relatorios > p{
+    font-size: 12px;
+    color: var(--cordestaquetransparente);
+    text-align: center;
+}
+
+@media (max-width:1200px){
+
+    .relatorios{
+        width: 500px;
+    }
+}
+
+@media (max-width:560px){
+    .relatorios{
+        width: 350px;
+    }
+}
+
+/*--------------------
+Página de planos
+---------------------*/
+
+.page-planos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.planos-nome{
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--cordestaque);
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
+
+.planos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+.plano-individual{
+    width: 300px;
+    height: 400px;
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    animation-duration: 1s;
+    animation-name: Pindividual;
+}
+
+.plano-individual-premium{
+    width: 300px;
+    height: 400px;
+    background-color: var(--cordestaque);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    color: var(--corsecundaria);
+    animation-duration: 1s;
+    animation-name: PindividualPremium;
+}
+
+.plano-individual > h2{
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 30px;
+    color: var(--cordestaque);
+}
+
+.plano-individual-premium > h2{
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.plano-individual > h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: var(--cordestaque);
+}
+
+.plano-individual-premium > h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.plano-individual > p{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 25px;
+    color: var(--cordestaque);
+}
+
+.plano-individual-premium > p{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.btn-assinar{
+    border: none;
+    padding: 10px 20px;
+    width: 150px;
+    margin-top: 20px;
+    background-color: var(--corcheck);
+    color: var(--corsecundaria);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    transition-duration: .5s;
+}
+
+.btn-assinar:hover{
+    padding: 15px 25px;
+    width: 155px;
+}
+
+.info-planos{
+    max-width: 900px;
+    margin-top: 50px;
+    margin-bottom: -70px;
+}
+
+.info-planos > p{
+    font-size: 12px;
+    color: var(--cordestaquetransparente);
+    text-align: center;
+}
+
+@media (max-width: 1350px){
+    .planos-nome{
+        margin-top: 10px;
+    }
+
+    .info-planos{
+        margin-bottom: 10px;
+    }
+}
+
+/*--------------------
+Página de suporte
+---------------------*/
+
+.suporte{
+    text-align: center;
+}
+
+.suporte > h1{
+    margin-bottom: 30px;
+}
+
+.formulario-suporte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--corsecundaria);
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.input-suporte{
+    border: none;
+    outline: none;
+    width: 350px;
+    height: 25px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px var(--corsombraultraleve);
+    border-radius: 5px;
+    background-color: var(--cordestaque);
+    color: var(--corsecundaria);
+    margin-top: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    animation-duration: 1s;
+    animation-name: inputSuporte;
+}
+
+.input-suporte::placeholder{
+    color: var(--corsecundaria);
+}
+
+.btn-suporte{
+    border: none;
+    padding: 10px 20px;
+    width: 250px;
+    margin-top: 20px;
+    background-color: var(--corcheck);
+    color: var(--corsecundaria);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+    animation-duration: 1s;
+    animation-name: inputSuporte;
+    transition-duration: .5s;
+}

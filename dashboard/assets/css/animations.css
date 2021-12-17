@@ -1,0 +1,48 @@
+@keyframes menuLatrela{
+    from{
+        transform: translateX(-240px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes relatorio{
+    from{
+        transform: translateX(100px);
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes Pindividual{
+    from{
+        transform: translateY(25px);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes PindividualPremium{
+    from{
+        transform: translateY(-25px);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes inputSuporte{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
